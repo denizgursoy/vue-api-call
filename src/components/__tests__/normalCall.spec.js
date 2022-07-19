@@ -6,7 +6,7 @@ jest.mock('../../clients/people', () => ({
 }))
 
 describe('NormalCall.vue', () => {
-    it('renders props.msg when passed', () => {
+    it('should mount component successfully', () => {
         const wrapper = shallowMount(NormalCall)
         expect(wrapper.exists()).toBeTruthy()
     })
