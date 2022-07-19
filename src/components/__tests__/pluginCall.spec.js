@@ -2,7 +2,7 @@ import {shallowMount} from '@vue/test-utils'
 import PluginCall from "../PluginCall";
 
 describe('PluginCall.vue', () => {
-    it('should mount component successfully', () => {
+    it('should mount component successfully', async () => {
         const wrapper = shallowMount(PluginCall, {
             mocks: {
                 $api: {
@@ -10,6 +10,10 @@ describe('PluginCall.vue', () => {
                 }
             }
         })
+
+        // If you need to change return after mounting the component
+        wrapper.vm.$api.getCharacter.mockResolvedValue({name: "Dart Wader"})
+        
         expect(wrapper.exists()).toBeTruthy()
     })
 })
