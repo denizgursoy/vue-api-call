@@ -2,10 +2,12 @@
     <div></div>
 </template>
 <script>
+    import {getCharacter} from "../clients/people"
+
     export default {
-        name: "PluginCall",
+        name: "FunctionCall",
         async mounted() {
-            const result = await this.$api.getCharacter(1);
+            const result = await getCharacter(1);
             console.log(result)
         }
     }

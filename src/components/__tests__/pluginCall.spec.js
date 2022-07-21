@@ -11,9 +11,9 @@ describe('PluginCall.vue', () => {
             }
         })
 
-        // If you need to change return after mounting the component
+        // If you need to change return value after mounting the component
         wrapper.vm.$api.getCharacter.mockResolvedValue({name: "Dart Wader"})
-        
+
         expect(wrapper.exists()).toBeTruthy()
     })
 })
