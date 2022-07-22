@@ -3,7 +3,7 @@
 </template>
 <script>
     export default {
-        name: "NormalCall",
+        name: "FetchCall",
         async mounted() {
             const id = 1
             const result = await fetch(`https://swapi.dev/api/people/${id}`).then((response) =>
